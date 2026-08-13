@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software or teaching manual, please cite the foundational CST deposit and this repository."
+title: "Volume I: The COSMOS/CST Universe Manual and Cosmic Synaptic Memory Library"
+type: software
+authors:
+  - family-names: Davis
+    given-names: Cory Shane
+repository-code: "https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual."
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-08-12
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.17574447"
+    description: "Foundational 12-Dimensional Cosmic Synapse Theory deposit"

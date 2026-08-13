@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cosmic-synaptic-memory"
+version = "0.1.0"
+description = "Provider-agnostic persistent recursive memory, planetary memory, and heartbeat adapters derived from the COSMOS/CST research program."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Cory Shane Davis"}]
+keywords = ["memory", "llm", "agents", "hebbian", "cosmos", "cst", "persistent-memory"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115", "uvicorn[standard]>=0.30"]
+azure = ["azure-cosmos>=4.7", "azure-identity>=1.17"]
+ble = ["bleak>=0.22"]
+dev = ["pytest>=8.0"]
+all = ["fastapi>=0.115", "uvicorn[standard]>=0.30", "azure-cosmos>=4.7", "azure-identity>=1.17", "bleak>=0.22"]
+
+[project.scripts]
+cosmic-memory = "cosmic_memory.cli:main"
+cosmic-memory-api = "cosmic_memory.service:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
